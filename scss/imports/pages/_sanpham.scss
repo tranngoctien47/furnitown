@@ -1,0 +1,120 @@
+.--menubottom {
+}
+
+.sanphampage {
+    .sanpham__top {
+        width: 100%;
+        height: 100%;
+        img {
+            width: 100%;
+            height: 450px;
+            object-fit: cover;
+        }
+    }
+    .sanpham__center {
+        padding: 20px 0;
+        width: 100%;
+        height: 100%;
+        .container {
+            .sanpham__center-list {
+                padding: 20px 0;
+                // height: 500px;
+                width: 100%;
+                height: 100%;
+                .textbox {
+                    padding-bottom: 40px;
+                    display: flex;
+                    .sp__title {
+                        font-size: 80px;
+                        color: #c48b2c;
+                    }
+                    .sp__description {
+                        width: 100%;
+
+                        display: flex;
+                        align-items: flex-end;
+                        .text1 {
+                            @include overtext(4);
+                            width: 100%;
+                            span {
+                                font-size: 18px;
+                                text-transform: uppercase;
+                                font-weight: 700;
+                            }
+                            p {
+                                line-height: 2;
+                                font-size: 12px;
+                                padding-top: 10px;
+                            }
+                        }
+                        .text2 {
+                            width: 100%;
+
+                            display: flex;
+                            justify-content: flex-end;
+
+                            a {
+                                text-decoration: none;
+                                color: black;
+                                font-size: 12px;
+                            }
+                        }
+                    }
+                }
+                .sp__list {
+                    .--center {
+                        margin: 0 20px;
+                    }
+                    .sp__list-item {
+                        width: 100%;
+                        height: 100%;
+                        .spimg {
+                            width: 100%;
+                            height: 100%;
+                            img {
+                                width: 100%;
+                                height: 100%;
+                            }
+                        }
+                        .text {
+                            padding-top: 20px;
+                            line-height: 2;
+                            width: 100%;
+                            height: 100%;
+                            .titlenews {
+                                width: 100%;
+                                height: 100%;
+                            }
+                            .description {
+                                width: 100%;
+                                height: 100%;
+                            }
+                            .hover__btn {
+                                width: 100%;
+                                height: 100%;
+                            }
+                        }
+                    }
+                }
+                .slick-initialized {
+                    .slick-slide {
+                        padding: 0 10px;
+                    }
+                }
+                .sp__bottom {
+                    display: flex;
+                    justify-content: flex-end;
+                    &-control {
+                        display: flex;
+                    }
+                }
+            }
+        }
+    }
+}
+
+.abc-carousel {
+    .prd-card {
+        max-width: 300px;
+    }
+}

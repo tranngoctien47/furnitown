@@ -1,0 +1,447 @@
+// CSS HOMEPAGE
+
+.homepage {
+    .homefurnitown {
+        width: 100%;
+        height: 100vh;
+        position: relative;
+        &__list {
+            width: 100%;
+            height: 100%;
+            .homefurnitown__list-item {
+                width: 100%;
+                height: 100%;
+                position: relative;
+                .boxtext {
+                    position: absolute;
+                    top: 50%;
+                    left: 50%;
+                    transform: translate(-50%, -50%);
+                    text-align: center;
+                    color: white;
+                    z-index: 200;
+
+                    .titlefurnitown {
+                        font-size: 80px;
+                        font-family: "Elle Baskerville";
+                    }
+                    .aftertitle {
+                        &::before {
+                            content: "";
+
+                            width: 100vh;
+                            height: 1px;
+
+                            background: white;
+                            display: inline-flex;
+                            margin: 30px 0;
+                        }
+                    }
+                    .descriptionhome {
+                        font-size: 12px;
+                        padding-bottom: 60px;
+                    }
+
+                    .btnmain {
+                        margin-top: 60px;
+                        margin: auto;
+                        border: 1px solid #0f0f0f;
+                        border-radius: 5px;
+
+                        background: #0f0f0f;
+
+                        text-decoration: none;
+                        color: white;
+
+                        width: 150px;
+                        height: 35px;
+                        font-size: 11px;
+
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+                    }
+                }
+                @include xs {
+                    .boxtext {
+                        padding-top: 30px;
+                        height: 100%;
+                        top: initial;
+                        left: initial;
+                        transform: initial;
+
+                        position: relative;
+
+                        display: flex;
+                        flex-direction: column;
+                        align-items: center;
+
+                        color: black;
+                        text-align: initial;
+                        .titlefurnitown {
+                            font-size: 45px;
+                        }
+                        .aftertitle {
+                            &::before {
+                                background: black;
+                                margin: 15px 0;
+                                width: 320px !important;
+                            }
+                        }
+                        .descriptionhome {
+                            text-align: center;
+                            font-weight: 700;
+
+                            width: 300px;
+
+                            padding-bottom: 30px;
+                        }
+                    }
+                }
+
+                .imghome {
+                    height: 100vh;
+
+                    img {
+                        height: 100%;
+                        width: 100%;
+                        max-width: 100%;
+                        min-width: 100%;
+                        min-height: 100%;
+                        object-fit: cover;
+                    }
+                    @include xs {
+                        img {
+                            height: initial;
+                            width: initial;
+                            max-width: -webkit-fill-available;
+                            min-width: initial;
+                            min-height: initial;
+                            object-fit: initial;
+                        }
+                    }
+                }
+                @include xs {
+                    .imghome {
+                        height: 100%;
+                    }
+                }
+            }
+        }
+        &__bottom {
+            width: 100%;
+            position: absolute;
+            bottom: 0px;
+            @include xs {
+                display: none;
+            }
+
+            &-item {
+                display: flex;
+                align-items: center;
+                flex-direction: column;
+                .arrown {
+                    width: 1px;
+                    margin-bottom: 8px;
+                }
+                .descriptionhomebottom {
+                    margin-top: 15px;
+                }
+                img {
+                    position: relative;
+                }
+            }
+            &-control {
+                display: flex;
+                justify-content: flex-end;
+                .control__btn {
+                    width: 40px;
+                    height: 40px;
+                    border: 1px solid #515354;
+                    background: #515354;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    img {
+                        width: 20px;
+                    }
+                }
+            }
+        }
+    }
+    @include xs {
+        .homefurnitown {
+            .homefurnitown__list {
+                // .flickity-viewport {
+                //     height: 600px;
+                // }
+            }
+        }
+
+        .homefurnitown {
+            width: initial;
+            height: initial;
+            &__list {
+                width: initial;
+                height: initial;
+                &-item {
+                    display: flex;
+                    flex-direction: column-reverse;
+                }
+            }
+        }
+    }
+    @media (max-width: 1069px) {
+        .homefurnitown {
+            .homefurnitown__list {
+                .homefurnitown__list-item {
+                    .boxtext {
+                        .aftertitle {
+                            &::before {
+                                width: 100%;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    .products {
+        .container {
+            display: flex;
+            padding-top: 160px;
+            .product__text {
+                .description {
+                    font-size: 12px;
+                    margin-top: -15px;
+                }
+            }
+            .product__img {
+                .titlemain {
+                    font-family: "Avenir Next LT Pro";
+                }
+                .img-product {
+                    overflow: hidden;
+                    position: relative;
+                    height: 452px;
+                    width: 100%;
+                    &:hover {
+                        .overlay__text {
+                            transition: -0.5s;
+                            opacity: 1;
+                            .hover__btn {
+                                transition: 0.5s;
+                            }
+                        }
+                        .overlay {
+                            width: 100%;
+                            height: 100%;
+                            background: #124960;
+                            opacity: 1;
+                            transition: 0.5s;
+                        }
+                    }
+                    .productimg {
+                        position: relative;
+                        width: 100%;
+                        height: 100%;
+                        .imgpro {
+                            position: absolute;
+                            min-width: 100%;
+                            min-height: 100%;
+                            object-fit: cover;
+                            // @include transform(translate(-50%, -50%) scale(1));
+                            transform: scale(1);
+                            @include transition($t);
+                            opacity: 1;
+                        }
+                        &:hover {
+                            .imgpro {
+                                // @include transform(translate(-50%, -50%) scale(1.2));
+                                transform: scale(1.2);
+                                @include transition($t);
+                                opacity: 0.2;
+                                z-index: 200;
+                            }
+                        }
+                    }
+                }
+                .productleft {
+                    overflow: hidden;
+                    position: relative;
+                    height: 260px;
+                    width: 100%;
+                }
+            }
+        }
+    }
+    @include xs {
+        .products {
+            .container {
+                display: block;
+                padding-top: 100px;
+                .product {
+                    .product__text {
+                        .description {
+                            display: none;
+                        }
+                    }
+                }
+            }
+        }
+    }
+    .kitchens {
+        padding: 60px 0;
+        .container {
+            .kitchen__img {
+                position: relative;
+                height: 360px;
+                width: 100%;
+                overflow: hidden;
+
+                &:hover {
+                    .overlay__text {
+                        transition: -0.5s;
+                        opacity: 1;
+                        .hover__btn {
+                            transition: 0.5s;
+                        }
+                    }
+                    .overlay {
+                        width: 100%;
+                        height: 100%;
+                        background: #124960;
+                        opacity: 1;
+                        transition: 0.5s;
+                    }
+                }
+                .kitchenimg {
+                    position: relative;
+                    width: 100%;
+                    height: 100%;
+                    .imgkc {
+                        position: absolute;
+                        min-width: 100%;
+                        min-height: 100%;
+                        object-fit: cover;
+                        // @include transform(translate(-50%, -50%) scale(1));
+                        transform: scale(1);
+                        @include transition($t);
+                        opacity: 1;
+                    }
+                    &:hover {
+                        .imgkc {
+                            // @include transform(translate(-50%, -50%) scale(1.2));
+                            transform: scale(1.2);
+                            @include transition($t);
+                            opacity: 0.2;
+                            z-index: 200;
+                        }
+                    }
+                }
+            }
+        }
+    }
+    @include xs {
+        .kitchens {
+            padding: 0;
+            padding-bottom: 40px;
+        }
+    }
+    .abouts {
+        position: relative;
+        .container {
+            position: relative;
+            z-index: 20;
+            display: flex;
+            .about {
+                .about__img {
+                    position: relative;
+                    .img-about {
+                        width: 100%;
+                        height: 452px;
+
+                        overflow: hidden;
+                        position: relative;
+                        &:hover {
+                            .overlay__text {
+                                transition: -0.5s;
+                                opacity: 1;
+
+                                .hover__btn {
+                                    transition: 0.5s;
+                                }
+                            }
+                            .overlay {
+                                width: 100%;
+                                height: 100%;
+                                background: #124960;
+                                opacity: 1;
+                                transition: 0.5s;
+                            }
+                        }
+                        .aboutimg {
+                            position: relative;
+                            width: 100%;
+                            height: 100%;
+                            .imgab {
+                                position: absolute;
+                                min-width: 100%;
+                                min-height: 100%;
+                                object-fit: cover;
+                                // @include transform(translate(-50%, -50%) scale(1));
+                                transform: scale(1);
+                                @include transition($t);
+                                opacity: 1;
+                            }
+                            &:hover {
+                                .imgab {
+                                    // @include transform(translate(-50%, -50%) scale(1.2));
+                                    transform: scale(1.2);
+                                    @include transition($t);
+                                    opacity: 0.2;
+                                    z-index: 200;
+                                }
+                            }
+                        }
+                    }
+                }
+                .about__right {
+                    position: relative;
+                    .img-about {
+                        width: 100%;
+                        height: 260px;
+
+                        overflow: hidden;
+                        position: relative;
+                    }
+                }
+
+                .about__text {
+                    .description {
+                        color: white;
+                        text-align: right;
+                    }
+                }
+            }
+        }
+        &::after {
+            content: "";
+            width: 100%;
+            height: 50%;
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            background: $dark-blue;
+            z-index: 1;
+        }
+    }
+    @include xs {
+        .abouts {
+            .container {
+                display: block;
+            }
+        }
+    }
+}

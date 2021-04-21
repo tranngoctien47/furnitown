@@ -1,0 +1,37 @@
+// css header
+header {
+    width: 100%;
+    height: var(--headerHeight);
+    position: absolute;
+    left: 0;
+    top: 0;
+    z-index: 100;
+    .container-fluid {
+        height: 100%;
+        display: flex;
+        justify-content: end;
+        align-items: center;
+        .logo {
+            padding: 0 40px;
+            a {
+                text-decoration: none;
+                color: #000000;
+                font-size: 12px;
+            }
+        }
+
+        .share {
+            padding-right: 40px;
+            a {
+                text-decoration: none;
+                color: #000000;
+                font-size: 12px;
+            }
+        }
+    }
+}
+@include xs {
+    header {
+        display: none;
+    }
+}
